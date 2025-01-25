@@ -25,7 +25,7 @@ print("""
 """)
 
 
-print("1. englsih to morse: ")
+print("1. englsih to morse code: ")
 print("2. morse code to english: \n")
 read = int(input("choose between (1/2) : "))
 
