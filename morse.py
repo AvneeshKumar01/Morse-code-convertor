@@ -55,7 +55,7 @@ elif read == 2:
     text1 = input("enter something... : ")
     translation = text1.split()
     print("\n .... translating to English ..... \n")
-    print(" ".join([english_dict[char] for char in translation if char in english_dict]))
+    print(" ".join([english_dict[char] for char in translation if char in english_dict]).capitalize())
 
 
 else :
