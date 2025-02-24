@@ -1,3 +1,5 @@
+from sound import *
+
 morse_dict = {
     'A': '.-', 'B': '-...', 'C': '-.-.', 'D': '-..', 'E': '.', 
     'F': '..-.', 'G': '--.', 'H': '....', 'I': '..', 'J': '.---', 
@@ -33,15 +35,23 @@ class Translator:
         text = input("enter something... : ").strip().upper()
         output = [self.morse_dict[char] for char in text if char in self.morse_dict]
         print("\n .... translating to morse code ..... \n")
+        joining = "".join(output)
         print(" ".join(output))
+        for symbols in joining:
+            if symbols == ".":
+                dot()
+            elif symbols == "-":
+                dash()
+            else :
+                return 0
 
+        
     def morse_to_english(self):
         text1 = input("Enter Morse code (separate letters with spaces): ").strip()
         translation = text1.split()
         print("\n .... Translating to English ..... \n")
         result = "".join([self.english_dict[char] for char in translation if char in self.english_dict])
         print(result.capitalize())
-
 
 
 print("1. englsih to morse: ")
