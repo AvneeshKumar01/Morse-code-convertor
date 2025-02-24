@@ -1,102 +1,56 @@
-# Morse Code Converter
+# Morse Code Translator
 
-`morse.py` is a Python script that provides functionality to encode text into Morse code and decode Morse code back into text. It is a simple, command-line tool for working with Morse code.
+This is a Python program that translates English text to Morse code and vice versa. It also plays sound for Morse code symbols using `pygame`.
 
 ## Features
+- Convert English text to Morse code
+- Convert Morse code to English text
+- Play sound for Morse code symbols (`dot.wav` and `dash.wav`)
 
-- Convert English text to Morse code.
-- Decode Morse code into English text.
-- Supports alphanumeric characters, common punctuation, and spaces.
-- Handles invalid input gracefully with error messages.
-
-## Prerequisites
-
-- Python 3.6 or higher
-
-## Installation
-
-1. Clone or download this repository to your local machine.
-2. Ensure Python is installed by running:
-
-   ```bash
-   python --version
-   ```
-
-3. Place `morse.py` in your desired working directory.
-
-## Usage
-
-To use the script, open a terminal and navigate to the directory containing `morse.py`. Run the script with the following command:
+## Requirements
+Make sure you have Python and the following dependencies installed:
 
 ```bash
-python morse.py
+pip install pygame
 ```
 
-### Options
+## How to Use
+1. Run the script:
+   ```bash
+   python morse.py
+   ```
+2. Choose an option:
+   - **1**: Convert English to Morse code
+   - **2**: Convert Morse code to English
+3. Enter your text and see the translation.
+4. If converting to Morse code, you will hear sounds for dots and dashes.
 
-Upon running, the script may provide options to:
-
-1. Encode text to Morse code.
-2. Decode Morse code to text.
-3. Exit the program.
-
-Follow the on-screen prompts to input the text or Morse code.
-
-### Example
-
-#### Encoding:
-
-Input:
+## File Structure
 ```
-Hello World
-```
-
-Output:
-```
-.... . .-.. .-.. --- / .-- --- .-. .-.. -..
+├── morse.py          # Main script
+├── sound.py          # Sound handling module
+├── dot.wav          # Sound for dot
+├── dash.wav         # Sound for dash
+├── README.md        # Documentation
 ```
 
-#### Decoding:
-
-Input:
+## Example
+### English to Morse
 ```
-.... . .-.. .-.. --- / .-- --- .-. .-.. -..
-```
-
-Output:
-```
-HELLO WORLD
+Input: SOS
+Output: ... --- ... (With sound playback)
 ```
 
-## Supported Characters
+### Morse to English
+```
+Input: ... --- ...
+Output: SOS
+```
 
-The script supports:
-
-- English letters (A-Z, a-z)
-- Numbers (0-9)
-- Common punctuation: `.,?'!/()&:;=+-_"@$`
-- Space (represented as `/` in Morse code)
-
-## Customization
-
-To customize the script (e.g., adding more characters or modifying behavior):
-
-1. Open `morse.py` in any text editor.
-2. Update the dictionary mappings for Morse code as needed.
-
-## Contributing
-
-Contributions are welcome! If you have ideas to improve this script, feel free to submit a pull request or open an issue.
+## Notes
+- Ensure `dot.wav` and `dash.wav` exist in the same directory as `morse.py`.
+- The script ignores unsupported characters.
 
 ## License
+This project is open-source and free to use.
 
-This project is licensed under the MIT License. See the `LICENSE` file for details.
-
-## Acknowledgements
-
-- The Morse code standard is based on ITU recommendations.
-- Thanks to all open-source contributors for inspiration.
-
----
-
-Feel free to modify this `README.md` file to suit your specific use case or add more details about your implementation.
