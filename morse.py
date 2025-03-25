@@ -36,6 +36,8 @@ class Translator:
         output = [self.morse_dict[char] for char in text if char in self.morse_dict]
         print("\n .... translating to morse code ..... \n")
         joining = "".join(output)
+        print(joining)
+        print("letter with spaces : ")
         print(" ".join(output))
         for symbols in joining:
             if symbols == ".":
